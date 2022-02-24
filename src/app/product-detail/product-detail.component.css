@@ -1,0 +1,12 @@
+.zoom {
+  padding: 10px;
+  transition: transform .2s; /* Animation */
+  margin: 0 auto;
+}
+
+.zoom:hover {
+  transform: scale(1.5); /* (150% zoom)*/
+}
+img:hover {
+  transform: scale(1.3);
+}

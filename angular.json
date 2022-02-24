@@ -1,5 +1,8 @@
 {
   "$schema": "./node_modules/@angular/cli/lib/config/schema.json",
+  "cli": {
+    "analytics": "a11050b9-47b9-41c3-af71-83bb0ae9bfbe"
+  },
   "version": 1,
   "newProjectRoot": "projects",
   "projects": {
@@ -27,9 +30,10 @@
               "src/assets"
             ],
             "styles": [
+              "./node_modules/ngx-toastr/toastr.css",
               "src/styles.css"
             ],
-            "scripts": []
+            "scripts": ["./node_modules/alertifyjs/build/alertify.min.js"]
           },
           "configurations": {
             "production": {

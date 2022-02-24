@@ -1,0 +1,32 @@
+<!--<li *ngIf="cartItems.length>0" class="nav-item dropdown">
+  <a class="nav-link dropdown-toggle" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+    Sepetiniz
+  </a>
+  <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+    <li *ngFor="let cartItem of cartItems"><a
+      class="dropdown-item">
+      <span class="badge bg-secondary">{{cartItem.quantity}}</span>{{cartItem.product.name}}
+      <span (click)="removeFromCart(cartItem.product)" class="badge bg-secondary">Sil</span></a>
+    </li>
+    <li><hr class="dropdown-divider"></li>
+    <li><a class="dropdown-item">Sepete git</a></li>
+  </ul>
+</li>-->
+<app-category></app-category>
+<h3>Cart</h3>
+
+  <div class="row">
+    <div *ngFor="let cartItem of cartItems" style="width: 16rem;" class="productbox" class="card">
+      <img [src]="cartItem.product.imageUrl" class='center-block img-responsive zoom'  class="card-img-top " alt="..." >
+      <div class="card-body">
+        <div class="card-title">
+          <span >{{ cartItem.product.name }}</span>
+          <span>{{ cartItem.product.price | currency }}</span>
+          <p class="card-text">{{cartItem.product.description}}</p>
+        </div>
+        <a (click)="removeFromCart(cartItem.product)"  class="btn btn-primary">Sil</a>
+        <a (click)="removeFromCart(cartItem.product)"  class="btn btn-success">Satın Al</a>
+      </div>
+    </div>
+  </div>
+
